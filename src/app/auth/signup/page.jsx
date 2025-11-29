@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import { FiLock, FiMail, FiUser } from "react-icons/fi";
-import { useActionState, useEffect } from "react";
+import { useEffect } from "react";
+import { useActionState } from "react";
 
 //internal import
 import Error from "@components/form/Error";
@@ -18,12 +19,10 @@ const SignUp = () => {
   const [state, formAction] = useActionState(verifyEmailAddress, undefined);
 
   useEffect(() => {
-    // console.log("state error 1st", state);
     if (state?.error) {
-      // console.log("state error", state);
-      notifyError(state?.error);
+      notifyError(state.error);
     }
-  });
+  }, [state?.error]);
 
   return (
     <>
