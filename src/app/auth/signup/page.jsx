@@ -36,7 +36,7 @@ const SignUp = () => {
                     Welcome to Kachabazar Store
                   </h2>
                   <p className="text-sm text-gray-600 mt-1 mb-6">
-                    Get started - it's free.
+                    Get started - it&apos;s free.
                   </p>
                 </div>
                 <form

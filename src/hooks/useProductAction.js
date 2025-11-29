@@ -12,7 +12,9 @@ export default function useProductAction({
   onCloseModal, // optional for modal flow
   withRouter = false, // if true, enable handleMoreInfo
 }) {
-  const router = withRouter ? useRouter() : null;
+  // const router = withRouter ? useRouter() : null;
+  const router = useRouter();
+
   const { setIsLoading, isLoading } = useContext(SidebarContext) || {};
   const { handleAddItem } = useAddToCart();
   const { getNumber, showingTranslateValue } = useUtilsFunction();
