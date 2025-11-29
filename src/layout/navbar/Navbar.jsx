@@ -23,11 +23,11 @@ const Navbar = async ({ globalSetting, storeCustomization }) => {
 
       <TopNavbar storeCustomization={storeCustomization} />
 
-      <header className="bg-[#786ba4] shadow">
+      <header as="header" className="bg-[#786ba4] shadow">
         <div className="max-w-screen-2xl mx-auto px-3 sm:px-10 lg:divide-y lg:divide-gray-200">
           <div className="relative flex h-20 justify-between">
             <div className="relative z-10 hidden sm:flex px-2 lg:px-0">
-              <Link href="/" className="flex shrink-0 items-center">
+              <Link href="/" className="flex flex-shrink-0 items-center">
                 <Image
                   src="/logo/Market_Place_logo.svg"
                   alt="MarketPlace"

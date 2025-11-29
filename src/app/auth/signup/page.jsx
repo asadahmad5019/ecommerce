@@ -2,8 +2,7 @@
 
 import Link from "next/link";
 import { FiLock, FiMail, FiUser } from "react-icons/fi";
-import { useEffect } from "react";
-import { useActionState } from "react";
+import { useActionState, useEffect } from "react";
 
 //internal import
 import Error from "@components/form/Error";
@@ -19,10 +18,12 @@ const SignUp = () => {
   const [state, formAction] = useActionState(verifyEmailAddress, undefined);
 
   useEffect(() => {
+    // console.log("state error 1st", state);
     if (state?.error) {
-      notifyError(state.error);
+      // console.log("state error", state);
+      notifyError(state?.error);
     }
-  }, [state?.error]);
+  });
 
   return (
     <>
@@ -36,7 +37,7 @@ const SignUp = () => {
                     Welcome to Kachabazar Store
                   </h2>
                   <p className="text-sm text-gray-600 mt-1 mb-6">
-                    Get started - it&apos;s free.
+                    Get started - it's free.
                   </p>
                 </div>
                 <form
